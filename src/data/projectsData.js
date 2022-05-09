@@ -8,6 +8,7 @@ import seven from '../assets/svg/projects/seven.svg'
 import eight from '../assets/svg/projects/eight.svg'
 import myntra from '../assets/png/myntra.png'
 import Tanishq from '../assets/png/Tanishq.png'
+import Sportsjam from '../assets/png/Sportsjam.png'
 
 
 export const projectsData = [
@@ -29,15 +30,15 @@ export const projectsData = [
         demo: 'https://heuristic-minsky-e408f0.netlify.app/',
         image: Tanishq
     },
-    // {
-    //     id: 3,
-    //     projectName: 'Weather App',
-    //     projectDesc: 'Weather forecast systems and applications predict weather conditions based on multiple parameters.',
-    //     tags: ['Django', 'CSS', 'Material Ui'],
-    //     code: 'https://github.com/hhhrrrttt222111/developer-portfolio',
-    //     demo: 'https://github.com/hhhrrrttt222111/developer-portfolio',
-    //     image: three
-    // },
+    {
+        id: 3,
+        projectName: 'Weather App',
+        projectDesc: 'Weather forecast systems and applications predict weather conditions based on multiple parameters.',
+        tags: ["React",'NodeJS','FrontEnd','BackEnd'],
+        code: 'https://github.com/Luke0912/Sportsjam',
+        demo: 'https://sports-jam.netlify.app/',
+        image: Sportsjam
+    },
     // {
     //     id: 4,
     //     projectName: 'Android Patient Tracker',
