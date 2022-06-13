@@ -32,8 +32,8 @@ export const projectsData = [
     },
     {
         id: 3,
-        projectName: 'Weather App',
-        projectDesc: 'Weather forecast systems and applications predict weather conditions based on multiple parameters.',
+        projectName: 'Sports-Jam',
+        projectDesc: 'A sports e-commerce website used for shopping sports accessories. Sports-Jam website Clone with real time backend database management Features:Login_SignUp||Landing Page||Product Section||Payment & CheckOut. Tech Stack used React||Node.js||Redux||Mongo||Json-server
         tags: ["React",'NodeJS','FrontEnd','BackEnd'],
         code: 'https://github.com/Luke0912/Sportsjam',
         demo: 'https://sports-jam.netlify.app/',
