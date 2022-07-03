@@ -1,15 +1,16 @@
-import one from '../assets/svg/projects/one.svg'
-import two from '../assets/svg/projects/two.svg'
-import three from '../assets/svg/projects/three.svg'
-import four from '../assets/svg/projects/four.svg'
-import five from '../assets/svg/projects/five.svg'
-import six from '../assets/svg/projects/six.svg'
-import seven from '../assets/svg/projects/seven.svg'
-import eight from '../assets/svg/projects/eight.svg'
-import myntra from '../assets/png/myntra.png'
-import Tanishq from '../assets/png/Tanishq.png'
+import ADMIN_UI from "../assets/png/ADMIN_UI.png"
+import MERN_APP from "../assets/png/MERN_APP.png"
 import Sportsjam from '../assets/png/Sportsjam.png'
-
+import Tanishq from '../assets/png/Tanishq.png'
+import eight from '../assets/svg/projects/eight.svg'
+import five from '../assets/svg/projects/five.svg'
+import four from '../assets/svg/projects/four.svg'
+import myntra from '../assets/png/myntra.png'
+import one from '../assets/svg/projects/one.svg'
+import seven from '../assets/svg/projects/seven.svg'
+import six from '../assets/svg/projects/six.svg'
+import three from '../assets/svg/projects/three.svg'
+import two from '../assets/svg/projects/two.svg'
 
 export const projectsData = [
     {
@@ -33,30 +34,30 @@ export const projectsData = [
     {
         id: 3,
         projectName: 'Sports-Jam',
-        projectDesc: 'A sports e-commerce website used for shopping sports accessories. Sports-Jam website Clone with real time backend database management Features:Login_SignUp||Landing Page||Product Section||Payment & CheckOut. Tech Stack used React||Node.js||Redux||Mongo||Json-server',
+        projectDesc: 'Sports-Jam(E-Commerce sports website) website Clone backend database management Features:Login_SignUp||Landing Page||Product Section||Payment & CheckOut.  React||Node.js||Redux||Mongo||Json-server',
         tags: ["React",'NodeJS','FrontEnd','BackEnd'],
         code: 'https://github.com/Luke0912/Sportsjam',
         demo: 'https://sports-jam.netlify.app/',
         image: Sportsjam
     },
-    // {
-    //     id: 4,
-    //     projectName: 'Android Patient Tracker',
-    //     projectDesc: 'This project involves the development of an Android application for viewing and managing patient data.',
-    //     tags: ['Flutter', 'Firebase'],
-    //     code: 'https://github.com/hhhrrrttt222111/developer-portfolio',
-    //     demo: 'https://github.com/hhhrrrttt222111/developer-portfolio',
-    //     image: four
-    // },
-    // {
-    //     id: 5,
-    //     projectName: 'E-Commerce App',
-    //     projectDesc: 'A Simple E-commerce application',
-    //     tags: ['React Native', 'Firebase'],
-    //     code: 'https://github.com/hhhrrrttt222111/developer-portfolio',
-    //     demo: 'https://github.com/hhhrrrttt222111/developer-portfolio',
-    //     image: five
-    // },
+    {
+        id: 4,
+        projectName: 'Admin-UI',
+        projectDesc: "TABLE || UI || PAGINATION || INMEMORY-EDIT & DELETE ||ROW-SELECTION",
+        tags: ["React","FrontEnd"],
+        code: 'https://github.com/Luke0912/Admin-UI',
+        demo: 'https://admin-ui-geektr.netlify.app/',
+        image: ADMIN_UI
+    },
+    {
+        id: 5,
+        projectName: 'Mern-App',
+        projectDesc: 'Mern Project with features:- Users should be able to sign up and login with email and password. After login, he can add or edit recipes of dishes. Other users can login and see dishes posted by all users. Tech-Stack Used React,Express,MongoDB,Node.Js',
+        tags: ["FrontEnd","BackEnd","React","MongoDB","Express","NodeJS"],
+        code: 'https://github.com/Luke0912/Mern-Practical-Assesment',
+        demo: 'https://mern-practical-assesment.netlify.app/',
+        image: MERN_APP
+    },
     // {
     //     id: 6,
     //     projectName: 'Uber Lite',
