@@ -15,7 +15,7 @@ export const projectsData = [
     tags: ['FrontEnd', 'React', 'Next', 'PostgreSQL'],
     code: 'https://github.com/Luke0912/next-app',
     demo: 'https://next-app-iota-nine.vercel.app/',
-    image: Next,
+    image: Nextapp,
   },
   {
     id: 2,
