@@ -48,16 +48,6 @@ export const projectsData = [
   },
   {
     id: 5,
-    projectName: 'Mern-App',
-    projectDesc:
-      'Mern Project with features:- Users should be able to sign up and login with email and password. After login, he can add or edit recipes of dishes. Other users can login and see dishes posted by all users. Tech-Stack Used React,Express,MongoDB,Node.Js',
-    tags: ['FrontEnd', 'BackEnd', 'React', 'MongoDB', 'Express', 'NodeJS'],
-    code: 'https://github.com/Luke0912/Mern-Practical-Assesment',
-    demo: 'https://mern-practical-assesment.netlify.app/',
-    image: MERN_APP,
-  },
-  {
-    id: 6,
     projectName: 'React-Redux Store',
     projectDesc:
       'Search Bar || Product Page || Category wise Filter || Add to cart || Edit cart item',
