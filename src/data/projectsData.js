@@ -3,11 +3,22 @@ import MERN_APP from '../assets/png/MERN_APP.png';
 import Sportsjam from '../assets/png/Sportsjam.png';
 import Tanishq from '../assets/png/Tanishq.png';
 import TeerexStore from '../assets/png/TeerexStore.png';
+import Nextapp from '../assets/png/Nextapp.png';
 import myntra from '../assets/png/myntra.png';
 
 export const projectsData = [
   {
     id: 1,
+    projectName: 'Next Full Stach App',
+    projectDesc:
+      'Search Bar || Router || Suspense || Login || App router and Data Fetching',
+    tags: ['FrontEnd', 'React', 'Next', 'PostgreSQL'],
+    code: 'https://github.com/Luke0912/next-app',
+    demo: 'https://next-app-iota-nine.vercel.app/',
+    image: Next,
+  },
+  {
+    id: 2,
     projectName: 'Myntra.com',
     projectDesc:
       'Myntra website Clone Features:Login_SignUp||Landing Page||Product Section||Payment & CheckOut',
@@ -17,7 +28,7 @@ export const projectsData = [
     image: myntra,
   },
   {
-    id: 2,
+    id: 3,
     projectName: 'Tanishq.com',
     projectDesc:
       'Tanishq website Clone with real time backend database management Features:Login_SignUp||Landing Page||Product Section||Payment & CheckOut',
@@ -27,7 +38,7 @@ export const projectsData = [
     image: Tanishq,
   },
   {
-    id: 3,
+    id: 4,
     projectName: 'Sports-Jam',
     projectDesc:
       'Sports-Jam(E-Commerce sports website) website Clone backend database management Features:Login_SignUp||Landing Page||Product Section||Payment & CheckOut.  React||Node.js||Redux||Mongo||Json-server',
@@ -37,7 +48,7 @@ export const projectsData = [
     image: Sportsjam,
   },
   {
-    id: 4,
+    id: 5,
     projectName: 'Admin-UI',
     projectDesc:
       'TABLE || UI || PAGINATION || INMEMORY-EDIT & DELETE ||ROW-SELECTION',
@@ -47,7 +58,7 @@ export const projectsData = [
     image: ADMIN_UI,
   },
   {
-    id: 5,
+    id: 6,
     projectName: 'Mern-App',
     projectDesc:
       'Mern Project with features:- Users should be able to sign up and login with email and password. After login, he can add or edit recipes of dishes. Other users can login and see dishes posted by all users. Tech-Stack Used React,Express,MongoDB,Node.Js',
@@ -57,7 +68,7 @@ export const projectsData = [
     image: MERN_APP,
   },
   {
-    id: 6,
+    id: 7,
     projectName: 'React-Redux Store',
     projectDesc:
       'Search Bar || Product Page || Category wise Filter || Add to cart || Edit cart item',
@@ -66,6 +77,7 @@ export const projectsData = [
     demo: 'https://teerex-shopee.netlify.app/',
     image: TeerexStore,
   },
+
   // {
   //     id: 6,
   //     projectName: 'Uber Lite',
