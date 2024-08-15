@@ -1,7 +1,6 @@
 import ADMIN_UI from '../assets/png/ADMIN_UI.png';
 import MERN_APP from '../assets/png/MERN_APP.png';
 import Sportsjam from '../assets/png/Sportsjam.png';
-import Tanishq from '../assets/png/Tanishq.png';
 import TeerexStore from '../assets/png/TeerexStore.png';
 import Nextapp from '../assets/png/Nextapp.png';
 import myntra from '../assets/png/myntra.png';
@@ -29,16 +28,6 @@ export const projectsData = [
   },
   {
     id: 3,
-    projectName: 'Tanishq.com',
-    projectDesc:
-      'Tanishq website Clone with real time backend database management Features:Login_SignUp||Landing Page||Product Section||Payment & CheckOut',
-    tags: ['HTML', 'CSS', 'Javascript', 'NodeJS', 'FrontEnd', 'BackEnd'],
-    code: 'https://github.com/Luke0912/Tanishq',
-    demo: 'https://heuristic-minsky-e408f0.netlify.app/',
-    image: Tanishq,
-  },
-  {
-    id: 4,
     projectName: 'Sports-Jam',
     projectDesc:
       'Sports-Jam(E-Commerce sports website) website Clone backend database management Features:Login_SignUp||Landing Page||Product Section||Payment & CheckOut.  React||Node.js||Redux||Mongo||Json-server',
@@ -48,7 +37,7 @@ export const projectsData = [
     image: Sportsjam,
   },
   {
-    id: 5,
+    id: 4,
     projectName: 'Admin-UI',
     projectDesc:
       'TABLE || UI || PAGINATION || INMEMORY-EDIT & DELETE ||ROW-SELECTION',
@@ -58,7 +47,7 @@ export const projectsData = [
     image: ADMIN_UI,
   },
   {
-    id: 6,
+    id: 5,
     projectName: 'Mern-App',
     projectDesc:
       'Mern Project with features:- Users should be able to sign up and login with email and password. After login, he can add or edit recipes of dishes. Other users can login and see dishes posted by all users. Tech-Stack Used React,Express,MongoDB,Node.Js',
@@ -68,7 +57,7 @@ export const projectsData = [
     image: MERN_APP,
   },
   {
-    id: 7,
+    id: 6,
     projectName: 'React-Redux Store',
     projectDesc:
       'Search Bar || Product Page || Category wise Filter || Add to cart || Edit cart item',
