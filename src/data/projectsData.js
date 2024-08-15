@@ -1,5 +1,4 @@
 import ADMIN_UI from '../assets/png/ADMIN_UI.png';
-import MERN_APP from '../assets/png/MERN_APP.png';
 import Sportsjam from '../assets/png/Sportsjam.png';
 import TeerexStore from '../assets/png/TeerexStore.png';
 import Nextapp from '../assets/png/Nextapp.png';
