@@ -1,88 +1,104 @@
-import React,{ useContext} from 'react';
-import { Link } from 'react-router-dom'
-import { makeStyles } from '@material-ui/core/styles';
-
-import { ThemeContext } from '../../contexts/ThemeContext';
-import { projectsData } from '../../data/projectsData'
-import { HiArrowRight } from "react-icons/hi";
-
+import React from 'react'
+import { FiGithub, FiExternalLink } from 'react-icons/fi'
 import './Projects.css'
-import SingleProject from './SingleProject/SingleProject';
+import { projectsData } from '../../data/projectsData'
+import useReveal from '../../utils/useReveal'
 
 function Projects() {
+  const sectionRef = useReveal()
 
-    const { theme } = useContext(ThemeContext);
+  return (
+    <section id="projects" className="section projects" aria-label="Projects section">
+      <div className="container">
+        <div ref={sectionRef}>
+          <div className="section-label reveal">Independent Work</div>
+          <h2 className="section-title reveal reveal-delay-1">Projects</h2>
+          <div className="section-divider" />
 
-    
-    const useStyles = makeStyles(() => ({
-        viewAllBtn : {
-            color: theme.tertiary, 
-            backgroundColor: theme.primary,
-            transition: 'color 0.2s',
-            "&:hover": {
-                color: theme.secondary, 
-                backgroundColor: theme.primary,
-            }
-        },
-        viewArr : {
-            color: theme.tertiary, 
-            backgroundColor: theme.secondary70,
-            width: '40px',
-            height: '40px',
-            padding: '0.5rem',
-            fontSize: '1.05rem',
-            borderRadius: '50%',
-            cursor: 'pointer',
-            transition: 'background-color 0.2s',
-            "&:hover": {
-                color: theme.tertiary, 
-                backgroundColor: theme.secondary,
-            }
-        },
-    }));
-
-    const classes = useStyles();
-
-    return (
-        <>
-            {projectsData.length > 0 && (
-                <div className="projects" id="projects" style={{backgroundColor: theme.secondary}}>
-                    <div className="projects--header">
-                        <h1 style={{color: theme.primary}}>Projects</h1>
-                    </div>
-                    <div className="projects--body">
-                        <div className="projects--bodyContainer">
-                            {projectsData.slice(0, 3).map(project => (
-                                <SingleProject
-                                    theme={theme}
-                                    key={project.id}
-                                    id={project.id}
-                                    name={project.projectName}
-                                    desc={project.projectDesc}
-                                    tags={project.tags}
-                                    code={project.code}
-                                    demo={project.demo}
-                                    image={project.image}
-                                />
-                            ))}
-                        </div> 
-
-                        {projectsData.length > 3 && (
-                            <div className="projects--viewAll">
-                                <Link to="/projects">
-                                    <button className={classes.viewAllBtn}>
-                                        View All
-                                        <HiArrowRight className={classes.viewArr} />
-                                    </button>
-                                </Link>
-                            </div>
-                        )}
-                    </div>
+          <div className="projects__grid">
+            {projectsData.map((project, idx) => (
+              <article
+                key={project.id}
+                className="project-card reveal"
+                style={{ '--delay': `${idx * 0.15}s` }}
+              >
+                {/* Header */}
+                <div className="project-card__header">
+                  <span className="project-card__number" aria-hidden="true">
+                    0{project.id}
+                  </span>
+                  <div className="project-card__links">
+                    {project.code && (
+                      <a
+                        href={project.code}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-card__link"
+                        aria-label={`${project.projectName} — GitHub repository`}
+                      >
+                        <FiGithub aria-hidden="true" />
+                      </a>
+                    )}
+                    {project.demo && (
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-card__link"
+                        aria-label={`${project.projectName} — live demo`}
+                      >
+                        <FiExternalLink aria-hidden="true" />
+                      </a>
+                    )}
+                  </div>
                 </div>
-            )}
 
-        </>
-    )
+                {/* Title */}
+                <h3 className="project-card__title">{project.projectName}</h3>
+
+                {/* Description */}
+                <p className="project-card__desc">{project.projectDesc}</p>
+
+                {/* Capabilities */}
+                <div className="project-card__caps">
+                  <h4 className="project-card__caps-label">Capabilities</h4>
+                  <ul className="project-card__caps-list">
+                    {project.capabilities.map((cap, i) => (
+                      <li key={i} className="project-card__cap-item">{cap}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Tags */}
+                <div className="project-card__tags" aria-label="Technologies">
+                  {project.tags.map(tag => (
+                    <span key={tag} className="tech-chip">{tag}</span>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+
+          {/* GitHub CTA */}
+          <div className="projects__github-cta reveal reveal-delay-4">
+            <p className="projects__github-text">
+              More work available on GitHub
+            </p>
+            <a
+              href="https://github.com/Luke0912"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn--ghost"
+              aria-label="View GitHub profile"
+            >
+              <FiGithub aria-hidden="true" />
+              View GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
 }
 
 export default Projects

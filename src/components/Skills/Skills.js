@@ -1,50 +1,41 @@
-import React,{ useContext } from 'react';
-import Marquee from "react-fast-marquee";
-
+import React from 'react'
 import './Skills.css'
-
-import { ThemeContext } from '../../contexts/ThemeContext';
 import { skillsData } from '../../data/skillsData'
-import { skillsImage } from '../../utils/skillsImage'
+import useReveal from '../../utils/useReveal'
 
 function Skills() {
+  const sectionRef = useReveal()
 
-    const { theme } = useContext(ThemeContext);
+  return (
+    <section id="stack" className="section skills" aria-label="Technical stack section">
+      <div className="container">
+        <div ref={sectionRef}>
+          <div className="section-label reveal">Technology</div>
+          <h2 className="section-title reveal reveal-delay-1">Technical Stack</h2>
+          <div className="section-divider" />
 
-    const skillBoxStyle = {
-        backgroundColor: theme.secondary,
-        boxShadow: `0px 0px 30px ${theme.primary30}`
-    }
-
-    return (
-        <div className="skills" style={{backgroundColor: theme.secondary}}>
-            <div className="skillsHeader">
-                <h2 style={{color: theme.primary}}>Skills</h2>
-            </div>
-            <div className="skillsContainer">
-                <div className="skill--scroll">
-                    <Marquee 
-                        gradient={false} 
-                        speed={80} 
-                        pauseOnHover={true}
-                        pauseOnClick={true} 
-                        delay={0}
-                        play={true} 
-                        direction="left"
-                    >
-                        {skillsData.map((skill, id) => (
-                            <div className="skill--box" key={id} style={skillBoxStyle}>
-                                <img src={skillsImage(skill)} alt={skill} />
-                                <h3 style={{color: theme.tertiary}}>
-                                    {skill}
-                                </h3>
-                            </div>
-                        ))}
-                    </Marquee>
+          <div className="skills__grid">
+            {Object.entries(skillsData).map(([category, technologies], idx) => (
+              <div
+                key={category}
+                className="skills__group reveal"
+                style={{ '--delay': `${idx * 0.06}s` }}
+              >
+                <h3 className="skills__group-title">{category}</h3>
+                <div className="skills__chips" role="list" aria-label={category}>
+                  {technologies.map(tech => (
+                    <span key={tech} className="skills__chip" role="listitem">
+                      {tech}
+                    </span>
+                  ))}
                 </div>
-            </div>
+              </div>
+            ))}
+          </div>
         </div>
-    )
+      </div>
+    </section>
+  )
 }
 
 export default Skills

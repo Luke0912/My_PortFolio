@@ -1,52 +1,28 @@
-import React, { useState, useContext } from 'react';
-import { IoIosArrowDropupCircle } from 'react-icons/io';
-import { makeStyles } from '@material-ui/core/styles';
-
-import { ThemeContext } from '../../contexts/ThemeContext';
-import './BackToTop.css';
+import React, { useState, useEffect } from 'react'
+import { FiArrowUp } from 'react-icons/fi'
+import './BackToTop.css'
 
 function BackToTop() {
-    const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(false)
 
-    const { theme } = useContext(ThemeContext);
+  useEffect(() => {
+    const onScroll = () => setVisible(window.scrollY > 400)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
-    const toggleVisible = () => {
-        const scrolled = document.documentElement.scrollTop;
-        if (scrolled > 300) {
-            setVisible(true);
-        } else if (scrolled <= 300) {
-            setVisible(false);
-        }
-    };
+  const scrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-        });
-    };
-
-    window.addEventListener('scroll', toggleVisible);
-
-    const useStyles = makeStyles(() => ({
-        icon: {
-            fontSize: '3rem',
-            color: theme.tertiary,
-        },
-    }));
-
-    const classes = useStyles();
-
-    return (
-        <div
-            style={{ display: visible ? 'inline' : 'none' }}
-            className='backToTop'
-        >
-            <button onClick={scrollToTop} aria-label='Back to top'>
-                <IoIosArrowDropupCircle className={classes.icon} />
-            </button>
-        </div>
-    );
+  return (
+    <button
+      className={`back-to-top${visible ? ' back-to-top--visible' : ''}`}
+      onClick={scrollTop}
+      aria-label="Scroll back to top"
+      tabIndex={visible ? 0 : -1}
+    >
+      <FiArrowUp aria-hidden="true" />
+    </button>
+  )
 }
 
-export default BackToTop;
+export default BackToTop

@@ -1,31 +1,36 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-
-import { Navbar, Footer, Landing, About, Skills, Testimonials, Blog, Education, Experience, Contacts, Projects, Services, Achievement } from '../../components'
-import { headerData } from '../../data/headerData'
+import {
+  Navbar, Footer, Landing, About, Skills,
+  Experience, Contacts, Projects, Architecture,
+  AIVoice
+} from '../../components'
 
 function Main() {
-    return (
-        <div>
-            <Helmet>
-                <title>{headerData.name} - Porfolio</title>
-            </Helmet>
+  return (
+    <div>
+      <Helmet>
+        <title>Shubham Dubey | Full Stack Engineer</title>
+        <meta
+          name="description"
+          content="Full Stack Engineer building scalable SaaS, AI-powered platforms, and real-time systems."
+        />
+      </Helmet>
 
-            <Navbar />        
-            <Landing />
-            <About />
-            <Education />
-            <Skills />
-            {/* <Experience /> */}
-            <Projects />
-            {/* <Achievement /> */}
-            <Services />
-            {/* <Testimonials /> */}
-            {/* <Blog /> */}
-            <Contacts />
-            <Footer />
-        </div>
-    )
+      <Navbar />
+      <main id="main-content">
+        <Landing />
+        <About />
+        <Experience />
+        <Skills />
+        <Architecture />
+        <AIVoice />
+        <Projects />
+        <Contacts />
+      </main>
+      <Footer />
+    </div>
+  )
 }
 
 export default Main

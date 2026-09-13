@@ -1,23 +1,54 @@
 export const experienceData = [
-    // {
-    //     id: 1,
-    //     company: 'Globex Corporation',
-    //     jobtitle: 'Frontend Developer',
-    //     startYear: '2018',
-    //     endYear: '2019'
-    // },
-    // {
-    //     id: 2,
-    //     company: 'Vehement Capital Partners',
-    //     jobtitle: 'Backend Developer',
-    //     startYear: '2019',
-    //     endYear: '2020'
-    // },
-    // {
-    //     id: 3,
-    //     company: 'Wonka Industries',
-    //     jobtitle: 'Marketing',
-    //     startYear: '2020',
-    //     endYear: 'Present'
-    // },
+  {
+    id: 1,
+    company: 'CodeBlox Systems Pvt Ltd (Swiftex)',
+    role: 'Software Engineer L2',
+    startDate: 'May 2026',
+    endDate: 'Present',
+    project: 'FunnelIQ — AI-Powered Conversational Lead & Voice Platform',
+    tags: ['Node.js', 'Python', 'React', 'PostgreSQL', 'RabbitMQ', 'Redis', 'GraphQL', 'Prisma', 'WebSockets', 'Socket.IO', 'SSE', 'Twilio', 'Exotel', 'TCL'],
+    responsibilities: [
+      'Building a multi-tenant AI-powered sales and lead intelligence platform with Node.js, Python, React, PostgreSQL, RabbitMQ, and Redis.',
+      'Integrating Twilio, Exotel, and TCL telephony with AI voice agents, live transcription, and conversational workflows for lead interactions.',
+      'Designing event-driven workflows for customer intent detection, Next Best Action (NBA), AI call summaries, and lead intelligence automation.',
+      'Developing backend services with Express, GraphQL, PostgreSQL, Prisma, RabbitMQ, and Redis for SaaS workflows.',
+      'Enabling real-time communication through WebSockets, Socket.IO, and Server-Sent Events (SSE).',
+      'Developing AI-agent management tools and analytics capabilities for sales and lead intelligence operations.',
+      'Supporting CRM workflows and dashboards used across lead management and sales processes.',
+    ],
+  },
+  {
+    id: 2,
+    company: 'Axeno Consulting Pvt Ltd',
+    role: 'Software Engineer',
+    startDate: 'May 2025',
+    endDate: 'Apr 2026',
+    project: 'Lead Management CRM Platform',
+    tags: ['Node.js', 'Express', 'GraphQL', 'REST APIs', 'MySQL', 'Prisma', 'RabbitMQ', 'React'],
+    responsibilities: [
+      'Architected a multi-tenant CRM platform for automotive and insurance business workflows.',
+      'Built GraphQL and REST APIs with Node.js, Express, MySQL, and Prisma.',
+      'Orchestrated asynchronous lead workflows and background processing with RabbitMQ.',
+      'Established Customer 360 capabilities to centralize customer and lead information.',
+      'Developed lead management modules for CRM workflows and customer operations.',
+      'Delivered workflow automation and reporting dashboards for end-to-end CRM operations.',
+    ],
+  },
+  {
+    id: 3,
+    company: 'Webvillee Technologies Pvt Ltd',
+    role: 'Software Developer',
+    startDate: 'Sept 2022',
+    endDate: 'Apr 2025',
+    project: 'Enterprise Applications across AI, Education, and Travel Domains',
+    tags: ['React', 'TypeScript', 'Next.js', 'Node.js', 'GraphQL', 'Microsoft Dynamics 365'],
+    responsibilities: [
+      'Created enterprise applications with React, TypeScript, Next.js, Node.js, and GraphQL across AI, education, and travel domains.',
+      'Built responsive frontend applications using React and TypeScript.',
+      'Developed a custom CMS with RBAC, session management, and SSO for AI content authoring workflows.',
+      'Delivered LMS and business workflow modules for application-specific processes.',
+      'Integrated Microsoft Dynamics 365 and real-time communication capabilities.',
+      'Contributed to scalable multi-tenant architectures across the frontend, backend, APIs, and third-party integrations.',
+    ],
+  },
 ]

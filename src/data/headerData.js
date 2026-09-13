@@ -1,10 +1,8 @@
-import profileImg from '../assets/png/profileImg.JPEG'
-import resume from '../assets/pdf/resume.pdf'
-
 export const headerData = {
-    name: 'Shubham Dubey',
-    title: "Web Developer",
-    desciption:" A professional who is responsible for the design and construction of websites ",
-    image: profileImg,
-    resumePdf: resume
+  name: 'Shubham Dubey',
+  title: 'Full Stack Engineer',
+  description: 'Building scalable SaaS, AI-powered platforms, and real-time systems.',
+  github: 'https://github.com/Luke0912',
+  linkedIn: 'https://www.linkedin.com/in/shubhamluke09',
+  email: 'shubhamdubey.dubey4@gmail.com',
 }

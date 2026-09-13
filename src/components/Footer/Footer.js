@@ -1,32 +1,47 @@
-import React, { useContext } from 'react'
+import React from 'react'
+import { FiGithub, FiLinkedin } from 'react-icons/fi'
 import './Footer.css'
-import { ThemeContext } from '../../contexts/ThemeContext'
-import { headerData } from '../../data/headerData'
 
 function Footer() {
+  const year = new Date().getFullYear()
 
-    const shortname = (name) => {
-        if(name.length > 10) {
-            return name.split(" ")[0]
-        } else {
-            return name
-        }
-    }
-
-    const { theme }  = useContext(ThemeContext)
-
-    return (
-        <div className="footer" style={{backgroundColor: theme.secondary}}>
-            <p style={{color: theme.tertiary}}>
-                Made with  
-                <span style={{color: theme.primary, margin: '0 0.5rem -1rem 0.5rem'}}>
-                    ❤
-                </span>
-                 by {shortname(headerData.name)}
-            </p>
+  return (
+    <footer className="footer" role="contentinfo">
+      <div className="container footer__inner">
+        <div className="footer__brand">
+          <span className="footer__name">Shubham Dubey</span>
+          <span className="footer__title">Full Stack Engineer</span>
         </div>
-    )
+
+        <div className="footer__links">
+          <a
+            href="https://www.linkedin.com/in/shubhamluke09"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer__link"
+            aria-label="LinkedIn profile"
+          >
+            <FiLinkedin aria-hidden="true" />
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com/Luke0912"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer__link"
+            aria-label="GitHub profile"
+          >
+            <FiGithub aria-hidden="true" />
+            GitHub
+          </a>
+        </div>
+
+        <p className="footer__copy">
+          © {year} Shubham Dubey
+        </p>
+      </div>
+    </footer>
+  )
 }
 
 export default Footer
-
